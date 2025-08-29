@@ -220,9 +220,29 @@ ul > li > a:hover{
     border-top: 2px solid blue;
     padding-top: 150px;
 }
-border-top: 2px solid blue;
-    padding-top: 130px;
-    width: 100%;
+.alll-cards{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 700px;
+    left: 200px;
+    gap: 40px;
+    border-top: 2px solid blue;
+    padding-top: 120px;
+    width: 80%;
 
+}
+.allll-cards{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 700px;
+    left: 200px;
+    gap: 40px;
+    border-top: 2px solid blue;
+    padding-top: 120px;
+    width: 80%;
+
+}
 
 
