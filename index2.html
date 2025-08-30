@@ -9,7 +9,7 @@
     width: 80px;
     border-radius: 10px;
     position: relative;
-    top: 20px;
+    top: -2px;
     left: 150px;
 }
 ul{
@@ -73,6 +73,52 @@ ul > li > a:hover::after{
 ul > li > a:hover{
     color: rgb(32, 160, 180);
 }
+
+.product-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 8); /* تعداد آیتم‌ها ضربدر عرض کارت */
+  animation: scroll 20s linear infinite;
+}
+
+.product-card {
+  flex: 0 0 250px;
+  margin: 0 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 10px;
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .product-card {
+    flex: 0 0 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    flex: 0 0 140px;
+  }}
     </style>
 </head>
 <body>
@@ -93,5 +139,47 @@ ul > li > a:hover{
         </DIV>
        
     </nav>
+
+<div class="product-slider">
+  <div class="slider-track">
+    <div class="product-card">
+      <img src="./images/banner1.jpeg" alt="Product 1">
+      <p>محصول اول</p>
+    </div>
+    <div class="product-card">
+      <img src="./images/1car.jpeg" alt="Product 2">
+      <p>محصول دوم</p>
+    </div>
+    <div class="product-card">
+      <img src="./images/images (1).jpeg" alt="Product 3">
+      <p>محصول سوم</p>
+    </div>
+    <div class="product-card">
+      <img src="./images/images g.jpeg" alt="Product 4">
+      <p>محصول چهارم</p>
+    </div>
+  </div>
+</div>
+<div class="product-slider">
+  <div class="slider-track">
+    <div class="product-card">
+      <img src="." alt="Product 1">
+      <p>محصول اول</p>
+    </div>
+    <div class="product-card">
+      <img src="./images/4car.jpeg" alt="Product 2">
+      <p>محصول دوم</p>
+    </div>
+    <div class="product-card">
+      <img src="./images/2car.jpeg" alt="Product 3">
+      <p>محصول سوم</p>
+    </div>
+    <div class="product-card">
+      <img src="./images/3car.jpeg" alt="Product 4">
+      <p>محصول چهارم</p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
