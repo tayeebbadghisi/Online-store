@@ -4,219 +4,388 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online-store</title>
-    <link rel="stylesheet" href="./style1.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            overflow-x: hidden;
+            font-family: sans-serif;
+        }
+
+        #logo{
+            width: 80px;
+            border-radius: 10px;
+            position: relative;
+            top: 10px;
+            left: 150px;
+        }
+
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            margin-top: -40px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            position: relative;
+        }
+
+        nav ul li a::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(32, 160, 180);
+            transform: scaleX(0);
+            transition: 0.3s ease;
+            transform-origin: left;
+        }
+
+        nav ul li a:hover::after{
+            transform: scaleX(1);
+        }
+
+        nav ul li a:hover{
+            color: rgb(32, 160, 180);
+        }
+
+        #log{
+            color: rgb(84, 79, 70);
+        }
+
+        #search{
+            color: slategray;
+        }
+
+        #img-titale{
+            margin-top: 30px;
+        }
+
+        .slider{
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            height: 200px;
+            margin-top: 20px;
+        }
+
+        .slides{
+            display: flex;
+            width: 300%;
+            animation: slide 12s infinite;
+        }
+
+        .slides img{
+            width: 100%;
+            display: block;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        @keyframes slide{
+            0% {transform: translateX(0);}
+            33% {transform: translateX(-100%);}
+            66% {transform: translateX(-200%);}
+            100% {transform: translateX(0);}
+        }
+
+        .section2, .section3{
+            text-align: center;
+            padding: 40px 10px;
+        }
+
+        .all-cards, .al-cards, .alll-cards, .allll-cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo{
+            transition: transform 0.3s ease;
+            width: 270px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px;
+        }
+
+        .photo:hover{
+            transform: translateY(-10px);
+        }
+
+        .photo img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .photo > div{
+            height: 150px;
+            width: 100%;
+            background-color: rgb(237, 250, 238);
+            color: black;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 10px 0px 5px 5px;
+            position: relative;
+        }
+
+        .photo > div h2{
+            font-family: unbounded;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .photo > div p{
+            font-size: 16px;
+        }
+
+        #more{
+            text-decoration: none;
+            color: black;
+            border: 1px solid rgb(195, 195, 219);
+            border-radius: 100%;
+            display: inline-block;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+        #more:hover{
+            background-color: rgb(237, 250, 238);
+            color: blue;
+            font-size: larger;
+        }
+
+        .photo > div > p::before{
+            content: "★★★★★★";
+            color: gold;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+        }
+        @media(max-width: 768px){
+            #logo{
+                left: 10px;
+            }
+            nav ul{
+                flex-direction: column;
+                margin-top: 10px;
+                gap: 10px;
+            }
+            .photo{
+                width: 90%;
+            }
+            .slider{
+                height: 180px;
+            }
+        }
+
+        @media(max-width: 480px){
+            .slider{
+                height: 150px;
+            }
+            .photo > div{
+                height: 130px;
+            }
+            .photo > div p{
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-       <nav>
-        <DIV class="nav-logo">
-            <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" width="100px" id="logo">
+    <nav>
+        <div class="nav-logo">
+            <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" id="logo">
             <ul>
                 <li><a href="./index1.html">Home</a></li>
                 <li><a href="./index2.html">Shopping</a></li>
                 <li><a href="./index3.html"> About</a></li>
                 <li><a href="./index4.html">contact</a></li>
-                 <i class="fa-solid fa-user-plus" id="log"></i>
-                 <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg">Log in</a></li>
-                  <li><a href="" id="search">🔍</a></li>
-                 
-
+                <i class="fa-solid fa-user-plus" id="log"></i>
+                <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg">Log in</a></li>
+                <li><a href="" id="search">🔍</a></li>
             </ul>
-        </DIV>
-       
+        </div>
     </nav>
+
     <section class="section1">
         <div>
-            <img src="./images/istockphoto-2000554586-2048x2048.jpg" alt="" width="100%" height="700px" id="img-titale">
+            <img src="./images/istockphoto-2000554586-2048x2048.jpg" alt="" width="100%" id="img-titale">
         </div>
         <div class="slider">
             <div class="slides">
-                <img src="./images/banner1.jpeg" alt="" height="200px">
-                <img src="./images/banner2.jpeg" alt="" height="200px">
-                <img src="./images/banner3.jpeg" alt="" height="200px">
-
-           
+                <img src="./images/banner1.jpeg" alt="">
+                <img src="./images/banner2.jpeg" alt="">
+                <img src="./images/banner3.jpeg" alt="">
+            </div>
+        </div>
     </section>
+
     <section class="section2">
-        <DIV class="all-cards">
-        <DIV class="photo first-photo">
-            <img src="./images/download.jpeg" alt="" width="270px" height="200">
-            <div>
-                <h2>computer</h2>
-                <p>Price: $600 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+        <div class="all-cards">
+            <div class="photo first-photo">
+                <img src="./images/download.jpeg" alt="">
+                <div>
+                    <h2>computer</h2>
+                    <p>Price: $600</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/download (1).jpeg" alt="" width="270px" height="200px">
-            <div>
-                <h2>computer</h2>
-                <p>Price: $300 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/download (1).jpeg" alt="">
+                <div>
+                    <h2>computer</h2>
+                    <p>Price: $300</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/images (2).jpeg" alt="" width="270px">
-            <div>
-                <h2>computer</h2>
-                <p>Price: $410 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/images (2).jpeg" alt="">
+                <div>
+                    <h2>computer</h2>
+                    <p>Price: $410</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/images (1).jpeg" alt="" width="270px">
-            <div>
-                <h2>computer</h2>
-                <p>Price: $200 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/images (1).jpeg" alt="">
+                <div>
+                    <h2>computer</h2>
+                    <p>Price: $200</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-            
+        </div>
 
-        </DIV>
-    </DIV>
-    <br>
-    <br><br>
-     <DIV class="al-cards">
-        <DIV class="photo first-photo">
-            <img src="./images/1.jpeg" alt="" width="270px" height="200">
-            <div>
-                <h2>Golds</h2>
-                <p>Price: $6050 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+        <div class="al-cards">
+            <div class="photo first-photo">
+                <img src="./images/1.jpeg" alt="">
+                <div>
+                    <h2>Golds</h2>
+                    <p>Price: $6050</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/download (2) z.jpeg" alt="" width="270px" height="200px">
-            <div>
-                <h2>Golds</h2>
-                <p>Price: $3700 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/download (2) z.jpeg" alt="">
+                <div>
+                    <h2>Golds</h2>
+                    <p>Price: $3700</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/images g.jpeg" alt="" width="200px">
-            <div>
-                <h2>Golds</h2>
-                <p>Price: $41000 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/images g.jpeg" alt="">
+                <div>
+                    <h2>Golds</h2>
+                    <p>Price: $41000</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/images p.jpeg" alt="" width="270px">
-            <div>
-                <h2>Golds</h2>
-                <p>Price: $9900 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/images p.jpeg" alt="">
+                <div>
+                    <h2>Golds</h2>
+                    <p>Price: $9900</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-            
-
-        </DIV>
-    </DIV>
+        </div>
     </section>
+
     <section class="section3">
-           <DIV class="alll-cards">
-        <DIV class="photo first-photo">
-            <img src="./images/t1.jpeg" alt="" width="270px" height="200">
-            <div>
-                <h2>Tablet</h2>
-                <p>Price: $100 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+        <div class="alll-cards">
+            <div class="photo first-photo">
+                <img src="./images/t1.jpeg" alt="">
+                <div>
+                    <h2>Tablet</h2>
+                    <p>Price: $100</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/t2.jpeg" alt="" width="270px" height="200px">
-            <div>
-                <h2>Tablet</h2>
-                <p>Price: $150 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/t2.jpeg" alt="">
+                <div>
+                    <h2>Tablet</h2>
+                    <p>Price: $150</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/t3.jpeg" alt="" width="270px" height="200px">
-            <div>
-                <h2>Tablet</h2>
-                <p>Price: $110 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/t3.jpeg" alt="">
+                <div>
+                    <h2>Tablet</h2>
+                    <p>Price: $110</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/t4.jpeg" alt="" width="270px" height="200px">
-            <div>
-                <h2>Tablet</h2>
-                <p>Price: $200 <br></p>
-
-                <a id="more" href="./index5.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/t4.jpeg" alt="">
+                <div>
+                    <h2>Tablet</h2>
+                    <p>Price: $200</p>
+                    <a id="more" href="./index5.html">More information</a>
+                </div>
             </div>
-            
+        </div>
 
-        </DIV>
-    </DIV>
-    <br>
-    <br><br>
-     <DIV class="allll-cards">
-        <DIV class="photo first-photo">
-            <img src="./images/1car.jpeg" alt="" width="270px" height="210px">
-            <div>
-                <h2>Ameracan-car</h2>
-                <p>Price: $6500 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+        <div class="allll-cards">
+            <div class="photo first-photo">
+                <img src="./images/1car.jpeg" alt="">
+                <div>
+                    <h2>Ameracan-car</h2>
+                    <p>Price: $6500</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/2car.jpeg" alt="" width="270px" height="210px">
-            <div>
-                <h2>Australan-car</h2>
-                <p>Price: $4700 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/2car.jpeg" alt="">
+                <div>
+                    <h2>Australan-car</h2>
+                    <p>Price: $4700</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/3car.jpeg" alt="" width="270px" height="210px">
-            <div>
-                <h2>00cae</h2>
-                <p>Price: $41000 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/3car.jpeg" alt="">
+                <div>
+                    <h2>00cae</h2>
+                    <p>Price: $41000</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-
-        </DIV>
-         <DIV class="photo first-photo">
-            <img src="./images/4car.jpeg" alt="" width="270px" height="210px">
-            <div>
-                <h2>af-car</h2>
-                <p>Price: $9900 <br></p>
-
-                <a id="more" href="./inform.of golds.html">More information</a>
+            <div class="photo first-photo">
+                <img src="./images/4car.jpeg" alt="">
+                <div>
+                    <h2>af-car</h2>
+                    <p>Price: $9900</p>
+                    <a id="more" href="./inform.of golds.html">More information</a>
+                </div>
             </div>
-            
-
-        </DIV>
-    </DIV>
-
-
+        </div>
     </section>
 </body>
 </html>
