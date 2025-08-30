@@ -73,6 +73,151 @@ ul > li > a:hover::after{
 ul > li > a:hover{
     color: rgb(32, 160, 180);
 }
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .contact-section {
+      width: 100%;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-container {
+      display: flex;
+      max-width: 1100px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      gap: 20px;
+    }
+
+
+    .card {
+      flex: 1;
+      padding: 40px;
+      border-radius: 10px;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+
+    .contact-info {
+      background: #2d3436;
+      color: #fff;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+    }
+
+    .contact-info ul li {
+      margin: 15px 0;
+      font-size: 15px;
+    }
+
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      color: #2d3436;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form form input:focus,
+    .contact-form form textarea:focus {
+      border-color: #0984e3;
+      box-shadow: 0 0 8px rgba(9,132,227,0.6);
+      transform: scale(1.02);
+    }
+
+    .contact-form form button {
+      padding: 12px 20px;
+      border: none;
+      background: #0984e3;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form form button:hover {
+      background: #0652DD;
+      box-shadow: 0 6px 15px rgba(6,82,221,0.4);
+      transform: scale(1.05);
+    }
+
+    #email{
+      text-decoration: none;
+      color: white;
+    }
+
+
+    @media (max-width: 480px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .card {
+        padding: 20px;
+      }
+    }
+
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 30px;
+      }
+      .card {
+        padding: 30px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .contact-container {
+        flex-direction: row;
+        gap: 15px;
+      }
+      .card {
+        padding: 30px;
+      }
+    }
     </style>
 </head>
 <body>
@@ -93,5 +238,31 @@ ul > li > a:hover{
         </DIV>
        
     </nav>
+
+     <section class="contact-section">
+    <div class="contact-container">
+      
+      <div class="contact-info card">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Get in touch with us via the following:</p>
+        <ul>
+          <li><strong>📞 Phone:</strong> +93 747 292 191</li>
+          <a href="mailto:safaazami05@gmail.com" id="email"><li><strong>✉ Email:</strong> safaazami05@gmail.com</li></a>
+          <li><strong>📍 Address:</strong> Kabul, Afghanistan</li>
+        </ul>
+      </div>
+
+      <div class="contact-form card">
+        <h2>Send Us a Message</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
 </body>
 </html>
