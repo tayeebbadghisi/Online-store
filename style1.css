@@ -6,21 +6,26 @@ body{
     justify-content: center;
 
 }
+.nav{
+    
+
+}
 #logo{
     width: 80px;
     border-radius: 10px;
     position: relative;
-    top: 20px;
+    top: 10px;
     left: 150px;
 }
 ul{
     display: flex;
     list-style: none;
-    gap: 50px;
+    gap: 100px;
     justify-content: center;
     text-align: center;
     align-items: center;
     margin-top: -40px;
+    
     
 }
 ul > li{
@@ -35,6 +40,7 @@ ul > li > a{
     color: rgb(0, 0, 0);
     position: relative;
     font-size: 18px;
+     position: fixed;
 }
 #log{
     position: absolute;
