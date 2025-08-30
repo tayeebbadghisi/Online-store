@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>information</title>
     <style>
+
+        
+        #logo{
+            width: 80px;
+            border-radius: 10px;
+            position: relative;
+            top: 10px;
+            left: 150px;
+        }
+
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            margin-top: -40px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            position: relative;
+        }
+
+        nav ul li a::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(32, 160, 180);
+            transform: scaleX(0);
+            transition: 0.3s ease;
+            transform-origin: left;
+        }
+
+        nav ul li a:hover::after{
+            transform: scaleX(1);
+        }
+
+        nav ul li a:hover{
+            color: rgb(32, 160, 180);
+        }
+
+        #log{
+            color: rgb(84, 79, 70);
+        }
         img{
   display: flex;
   justify-content: center;
@@ -53,16 +104,33 @@ h3:hover{
     </style>
 </head>
 <body>
+
+
+    <nav>
+        <div class="nav-logo">
+            <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" id="logo">
+            <ul>
+                <li><a href="./index1.html">Home</a></li>
+                <li><a href="./index2.html">Shopping</a></li>
+                <li><a href="./index3.html"> About</a></li>
+                <li><a href="./index4.html">contact</a></li>
+                <i class="fa-solid fa-user-plus" id="log"></i>
+                <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg">Log in</a></li>
+                <li><a href="" id="search">🔍</a></li>
+            </ul>
+        </div>
+    </nav>
+     <br><br>
     <hr style="height: 3px; color: blue;">
     <div class="parents">
         <div>
     <img src="./images/images p.jpeg" alt="" width="400">
     <img src="./images/4car.jpeg" alt="" width="400px">
     <div>
-    <h3>Name prodact: Golds <br> <br>price prodact: Per kilo $90000  <br> <br> Service coverage area: 34 Provinces <br> <br> Payment Method: Acaording to the pulse <br> <br> Transfer fee to the Provinces:0</h3>
+    <h3>Name prodact: Golds <br> <br>price prodact: Per kilo $90000  <br> <br> Service coverage area: 34 Provinces <br> <br> Payment Method: Acaording to the pulse <br> <br> Transfer free to the Provinces:0</h3>
     <hr>
     <br>
-    <h3>Name prodact: Car <br> <br>price prodact: One-seed$18000  <br> <br> Service coverage area: 32 Provinces <br> <br> Payment Method: Acaording to the pulse <br> <br> Transfer fee to the Provinces:0</h3>
+    <h3>Name prodact: Car <br> <br>price prodact: One-seed$18000  <br> <br> Service coverage area: 32 Provinces <br> <br> Payment Method: Acaording to the pulse <br> <br> Transfer free to the Provinces:0</h3>
     <a class="cart"  href="">Shapping cart🚜</a>
 </div>
 </div>

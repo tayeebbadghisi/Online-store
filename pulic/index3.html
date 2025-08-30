@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #logo{
+    width: 80px;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+    left: 150px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: -40px;
+    
+}
+ul > li{
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 400;
+    position: relative;
+    left: 5px;
+}
+ul > li > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    font-size: 18px;
+}
+#log{
+    position: absolute;
+    right: 350px;
+    color: rgb(84, 79, 70);
+    
+}
+#search{
+    color: slategray;
+
+}
+ul a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+
+}
+
+
+ul > li > a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(32, 160, 180);
+    transform: scaleX(0);
+    transition: 0.3s ease;
+    transform-origin: left;
+    
+}
+ul > li > a:hover::after{
+    transform: scaleX(1);
+    
+}
+ul > li > a:hover{
+    color: rgb(32, 160, 180);
+}
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #000000;
+      background-color: #F4F4F4;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-links li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .navbar .nav-links li a.active {
+      font-weight: bold;
+      color: #FF6F61;
+    }
+
+    .hero {
+      height: 60vh;
+      margin-top: 100px;
+      color: #000000;
+      margin-left: 40px;
+    }
+
+    .hero1 {
+      height: 70vh;
+      margin-top: -60px;
+      color: #000000;
+      margin-left: 40px;
+    }
+
+    .img-clothes{
+      width: 300px;
+      height: 300px;
+      float: right;
+      margin-top: -240px;
+      margin-right: 40px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-clothes:hover{
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .img-Dishes{
+      width: 300px;
+      height: 300px;
+      float: right;
+      margin-top: -300px;
+      margin-right: 40px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-Dishes:hover{
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .mission-values {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 10%;
+      background: #fffcf0;
+      flex-wrap: wrap;
+    }
+
+    .mission, .values {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+
+    .values ul li {
+    position: relative;
+    top: 45px;
+    }
+
+    .timeline {
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    .timeline-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      width: 30%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .team {
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .team-member {
+      width: 22%;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .team-member img {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background:rgb(32, 160, 180);
+      color: #fff;
+    }
+
+    @media (max-width: 480px) {
+      .hero, .hero1 {
+        margin: 20px;
+        height: auto;
+      }
+
+      .img-clothes, .img-Dishes {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin: 20px auto;
+        display: block;
+      }
+
+      .mission-values {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .mission, .values {
+        width: 100%;
+      }
+
+      .timeline-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline-item {
+        width: 100%;
+      }
+
+      .team-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .team-member {
+        width: 90%;
+      }
+    }
+
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .hero, .hero1 {
+        margin: 40px;
+        height: auto;
+      }
+
+      .img-clothes, .img-Dishes {
+        width: 80%;
+        height: auto;
+        float: none;
+        margin: 20px auto;
+        display: block;
+      }
+
+      .mission-values {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .mission, .values {
+        width: 100%;
+      }
+
+      .timeline-item {
+        width: 80%;
+      }
+
+      .team-member {
+        width: 70%;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .mission, .values {
+        width: 48%;
+      }
+
+      .timeline-item {
+        width: 45%;
+      }
+
+      .team-member {
+        width: 45%;
+      }
+
+      .img-clothes, .img-Dishes {
+        width: 50%;
+        height: auto;
+        float: none;
+        margin: 20px auto;
+        display: block;
+      }
+    }
+    </style>
+</head>
+<body>
+         <nav>
+        <DIV class="nav-logo">
+            <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" width="100px" id="logo">
+            <ul>
+                <li><a href="./index1.html">Home</a></li>
+                <li><a href="./index2.html">Shopping</a></li>
+                <li><a href="./index3.html"> About</a></li>
+                <li><a href="./index4.html">contact</a></li>
+                 <i class="fa-solid fa-user-plus" id="log"></i>
+                 <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg">Log in</a></li>
+                  <li><a href="" id="search">🔍</a></li>
+                 
+
+            </ul>
+        </DIV>
+       
+    </nav>
+    <section class="hero">
+    <div class="hero-text">
+      <h1>About Our Online Shop</h1>
+      <p>Welcome to Our Online Store.<br><br>
+        Our journey began with a simple idea: to create a shopping experience that is easy, reliable, and enjoyable for everyone. <br> Since launching in 2023, we have been committed to providing our customers with high-quality products at the best prices.<br><br>
+        At our store, we believe that quality is non-negotiable. Every product you find here has been carefully selected. <br> and checked to ensure it meets our standards. From fashion and accessories to electronics and home essentials, <br> we aim to bring you everything you need — all in one place.
+      </p>
+      <img src="./images/clothes img.jpg" alt="Clothes Picture" class="img-clothes">
+    </div>
+  </section>
+
+  <section class="hero1">
+    <div class="hero-text1">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to deliver trustworthy products with the highest level of customer support. <br><br>
+        We believe that every customer deserves not only a product, but also peace of mind with every purchase. <br> That’s why we carefully select and verify each item before it reaches our store. <br><br>
+        We are committed to building long-term relationships with our customers by providing clear product details, <br> fair pricing, and fast delivery. <br><br>
+        Ultimately, our mission is to become not only a trusted online store but also a partner in your lifestyle,  <br>offering you confidence, convenience, and care with every purchase.
+      </p>
+      <img src="./images/Dishes img.jpg" alt="Dishes Photo" class="img-Dishes">
+    </div>
+  </section>
+
+  <section class="mission-values">
+    <div class="mission">
+      <h2>Our Promise</h2>
+      <p>We promise to put our customers first by offering original products, transparent service, and friendly support whenever you need it.</p>
+    </div>
+    <div class="values">
+      <h2>Our Values</h2>
+      <ul>
+        <li>Quality & Integrity</li>
+        <li>Customer-Centric Approach</li>
+        <li>Innovation & Creativity</li>
+        <li>Transparency & Trust</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <h2>Our Journey</h2>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <h3>2023</h3>
+        <p>Our online store was launched with a vision to revolutionize shopping.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2024</h3>
+        <p>Expanded product range and enhanced customer support.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>2025</h3>
+        <p>Leading the market with quality, innovation, and trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="./images/Tayeeb omg.jpg" alt="Team Member 1">
+        <h3>Tayeeb Javandi</h3>
+        <p>Front-end Developer</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/Safa img.jpg" alt="Team Member 2">
+        <h3>Safa Azami</h3>
+        <p>Front-end Developer</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Online Store - All Rights Reserved</p>
+  </footer>
+</body>
+</html>
