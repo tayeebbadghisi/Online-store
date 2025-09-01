@@ -74,35 +74,9 @@
             margin-top: 30px;
         }
 
-        .slider{
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            position: relative;
-            height: 200px;
-            margin-top: 20px;
-        }
+        
 
-        .slides{
-            display: flex;
-            width: 300%;
-            animation: slide 12s infinite;
-        }
-
-        .slides img{
-            width: 100%;
-            display: block;
-            flex-shrink: 0;
-            object-fit: cover;
-        }
-
-        @keyframes slide{
-            0% {transform: translateX(0);}
-            33% {transform: translateX(-100%);}
-            66% {transform: translateX(-200%);}
-            100% {transform: translateX(0);}
-        }
+       
 
         .section2, .section3{
             text-align: center;
@@ -118,11 +92,12 @@
         }
 
         .photo{
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
             width: 270px;
-            border: 1px solid black;
+            
             border-radius: 10px;
             box-shadow: 0.5px 0.5px 0.5px 0.5px;
+            color: #cacccc;
         }
 
         .photo:hover{
@@ -137,9 +112,9 @@
         }
 
         .photo > div{
-            height: 150px;
+            height: 130px;
             width: 100%;
-            background-color: rgb(237, 250, 238);
+            
             color: black;
             padding: 10px;
             text-align: center;
@@ -164,28 +139,19 @@
         #more{
             text-decoration: none;
             color: black;
-            border: 1px solid rgb(195, 195, 219);
-            border-radius: 100%;
+           
             display: inline-block;
             padding: 5px 10px;
             transition: 0.3s;
         }
 
         #more:hover{
-            background-color: rgb(32, 160, 180);
+            background-color: rgb(183, 209, 213);
             color: white;
-            font-size: larger;
+            border-radius: 10px;
         }
 
-        .photo > div > p::before{
-            content: "★★★★★★";
-            color: gold;
-            position: absolute;
-            top: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 14px;
-        }
+        
         @media(max-width: 768px){
             #logo{
                 left: 10px;
@@ -290,6 +256,38 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+    #log-in{
+        position: relative;
+        left: 450px;
+    }
+    #search{
+        position: relative;
+        left: 470px;
+    }
+    H5{
+        font-size: 4rem;
+        font-weight: 800px;
+        position: relative;
+        left: 280px;
+        bottom: 800px;
+        color: white;
+    }
+    h6{
+        font-size: 2rem;
+        font-weight: 800px;
+        position: relative;
+        left: 100px;
+        bottom: 660px;
+        color: white;
+    }
+    .Turn{
+        font-size: 2rem;
+        font-weight: 600px;
+        position: relative;
+        left: 950px;
+        bottom: 700px;
+        color: white;
+    }
     </style>
 </head>
 <body>
@@ -297,12 +295,12 @@
         <div class="nav-logo">
             <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" id="logo">
             <ul>
-                <li><a href="./index1.html">Home</a></li>
-                <li><a href="./index2.html">Shopping</a></li>
-                <li><a href="./index3.html"> About</a></li>
-                <li><a href="./index4.html">contact</a></li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="shopin.html">Shopping</a></li>
+                <li><a href="About.html"> About</a></li>
+                <li><a href="contact.html">contact</a></li>
                 <i class="fa-solid fa-user-plus" id="log"></i>
-                <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg">Log in</a></li>
+                <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" id="log-in">Log in</a></li>
                 <li><a href="" id="search">🔍</a></li>
             </ul>
         </div>
@@ -311,14 +309,12 @@
     <section class="section1">
         <div>
             <img src="./images/istockphoto-2000554586-2048x2048.jpg" alt="" width="100%" id="img-titale">
+            <h5>Welcome TO OUR Online-STORE</h5>
+            <h6>Online Shopping Wesite</h6>
+            <p class="Turn">Turn Your Imagination into Reality</p>
         </div>
-        <div class="slider">
-            <div class="slides">
-                <img src="./images/banner1.jpeg" alt="">
-                <img src="./images/banner2.jpeg" alt="">
-                <img src="./images/banner3.jpeg" alt="">
-            </div>
-        </div>
+        
+        
     </section>
 
     <section class="section2">

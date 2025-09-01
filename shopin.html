@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Product Slider</title>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+ #logo{
+            width: 80px;
+            border-radius: 10px;
+            position: relative;
+            top: 10px;
+            left: 150px;
+        }
+
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            margin-top: -40px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            position: relative;
+        }
+
+        nav ul li a::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(32, 160, 180);
+            transform: scaleX(0);
+            transition: 0.3s ease;
+            transform-origin: left;
+        }
+
+        nav ul li a:hover::after{
+            transform: scaleX(1);
+        }
+
+        nav ul li a:hover{
+            color: rgb(32, 160, 180);
+        }
+
+        #log{
+            color: rgb(84, 79, 70);
+        }
+
+
+.product-slider {
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 0px;
+    background-color: #fff;
+    padding-left: 30px;
+    position: relative;
+    top: 50px;
+}
+h1{
+    text-align: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+}
+.btn{
+   position: relative;
+   left: 450px;
+   top: -25px;
+   width: 100px;
+   height: 30px;
+   background-color: rgb(32, 160, 180);
+   border-radius: 10px;
+   color: white;
+}
+.btn:hover{
+    color: white;
+    background-color: black;
+}
+ #log-in{
+        position: relative;
+        left: 450px;
+    }
+    #search{
+        position: relative;
+        left: 470px;
+    }
+     .timeline {
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    .timeline-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      width: 30%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .team {
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .team-member {
+      width: 22%;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .team-member img {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+     footer {
+      text-align: center;
+      padding: 20px;
+      background:rgb(32, 160, 180);
+      color: #fff;
+    }
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    #logo {
+        left: 0;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .btn {
+        left: 0;
+        top: 10px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .timeline-item,
+    .team-member {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+    nav ul {
+        gap: 20px;
+    }
+
+    .timeline-item {
+        width: 45%;
+    }
+
+    .team-member {
+        width: 45%;
+    }
+}
+
+
+@media (min-width: 901px) {
+    .timeline-item {
+        width: 30%;
+    }
+
+    .team-member {
+        width: 22%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+ <nav>
+        <div class="nav-logo">
+            <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" id="logo">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="shopin.html">Shopping</a></li>
+                <li><a href="About.html"> About</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <i class="fa-solid fa-user-plus" id="log"></i>
+                <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" id="log-in">Log in</a></li>
+                <li><a href="" id="search">🔍</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+<div class="product-slider">
+    <h1>Your cart is empty</h1>
+    <button class="btn">Buy the item</button>
+</div>
+<section class="team">
+    
+    <div class="team-container">
+      <div class="team-member">
+        <img src="./images/1car.jpeg" alt="Team Member 1" height="200px">
+        <h3>Ameracan-car</h3>
+        <p>price:$6500</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/2car.jpeg" alt="Team Member 2" height="200px">
+        <h3>Australan-car</h3>
+        <p>price:$4700</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/3car.jpeg" alt="Team Member 2" height="200px">
+        <h3>00car</h3>
+        <p>price:$41000</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/4car.jpeg" alt="Team Member 2" height="200px">
+        <h3>Af-car</h3>
+        <p>price:$9900</p>
+      </div><div class="team-member">
+        <img src="./images/t1.jpeg" alt="Team Member 2" height="200px">
+        <h3>Tablet</h3>
+        <p>price:$100</p>
+      </div><div class="team-member">
+        <img src="./images/t2.jpeg" alt="Team Member 2" height="200px">
+        <h3>Tablet</h3>
+        <p>price:$150</p>
+      </div><div class="team-member">
+        <img src="./images/t3.jpeg" alt="Team Member 2" height="200px">
+        <h3>Tablet</h3>
+        <p>price:$110</p>
+      </div><div class="team-member">
+        <img src="./images/t4.jpeg" alt="Team Member 2" height="200px">
+        <h3>Tablet</h3>
+        <p>price:$200</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/1.jpeg" alt="Team Member 1" height="200px">
+        <h3>Golds</h3>
+        <p>price:$6050</p>
+      </div>
+      <div class="team-member">
+      <img src="./images/download (2) z.jpeg" alt="" height="200px">
+        <h3>Golds</h3>
+        <p>price:$3700</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/images g.jpeg" alt="Team Member 2" height="200px">
+        <h3>Golds</h3>
+        <p>price:$42000</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/images p.jpeg" alt="Team Member 2" height="200px">
+        <h3>Golds</h3>
+        <p>price:$9900</p>
+      </div><div class="team-member">
+        <img src="./images/download.jpeg" alt="Team Member 2" height="200px">
+        <h3>computer</h3>
+        <p>price:$600</p>
+      </div><div class="team-member">
+        <img src="./images/download (1).jpeg" alt="Team Member 2" height="200px">
+        <h3>computer</h3>
+        <p>price:$300</p>
+      </div><div class="team-member">
+        <img src="./images/images (2).jpeg" alt="Team Member 2" height="200px">
+        <h3>computer</h3>
+        <p>price:$410</p>
+      </div><div class="team-member">
+        <img src="./images/images (1).jpeg" alt="Team Member 2" height="200px">
+        <h3>computer</h3>
+        <p>price:$200</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Online Store - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
