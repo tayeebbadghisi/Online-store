@@ -3,30 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
     <link rel="stylesheet" href="./style1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <style>
   
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 10%;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #000000;
+      background-color: #F4F4F4;
     }
 
-    .navbar .nav-links li {
-      display: inline-block;
-      margin-left: 20px;
-    }
-
-    .navbar .nav-links li a.active {
-      font-weight: bold;
-      color: #FF6F61;
-    }
 
     .hero {
       height: 60vh;
@@ -73,11 +62,10 @@
     }
 
     .mission-values {
-      display: flex;
       justify-content: space-around;
       padding: 50px 10%;
       background: #fffcf0;
-      flex-wrap: wrap;
+      
     }
 
     .mission, .values {
@@ -85,9 +73,20 @@
       margin-bottom: 20px;
     }
 
-    .values ul li {
-    position: relative;
-    top: 45px;
+    .values:hover{
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .values{
+      width: 20%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+      
     }
 
     .timeline {
@@ -127,6 +126,7 @@
       justify-content: space-around;
       flex-wrap: wrap;
       margin-top: 30px;
+      gap: 10px;
     }
 
     .team-member {
@@ -254,11 +254,33 @@
         display: block;
       }
     }
-     
+    #handshake{
+      width: 300px;
+      height: 200px;
+      position: relative;
+      left: 700px;
+      top: -100px;
+       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+
+    }
+    #handshake:hover{
+         box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: translateY(-10px) scale(1.05);
+    }
+    .values{
+      position: relative;
+      top: -100px;
+    }
+    .h2-values{
+      position: relative;
+      top: -110px;
+    }
     </style>
 </head>
 <body>
-       <nav>
+          <nav>
         <div class="nav-links">
             <div class="nav-logo"> <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" id="logo"></div>
             <div>
@@ -300,23 +322,23 @@
         We are committed to building long-term relationships with our customers by providing clear product details, <br> fair pricing, and fast delivery. <br><br>
         Ultimately, our mission is to become not only a trusted online store but also a partner in your lifestyle,  <br>offering you confidence, convenience, and care with every purchase.
       </p>
-      <img src="./images/Dishes img.jpg" alt="Dishes Photo" class="img-Dishes">
     </div>
+    <img src="./images/Dishes img.jpg" alt="Dishes Photo" class="img-Dishes">
   </section>
+
 
   <section class="mission-values">
     <div class="mission">
       <h2>Our Promise</h2>
       <p>We promise to put our customers first by offering original products, transparent service, and friendly support whenever you need it.</p>
+      <img src="./images/WhatsApp Image 2025-09-03 at 10.46.35_e7bf5cf2.jpg" alt="Handshake photo" id="handshake">
     </div>
-    <div class="values">
-      <h2>Our Values</h2>
-      <ul>
-        <li>Quality & Integrity</li>
-        <li>Customer-Centric Approach</li>
-        <li>Innovation & Creativity</li>
-        <li>Transparency & Trust</li>
-      </ul>
+    <div>
+      <h2 class="h2-values">Our Values</h2>
+        <div class="values">Quality & Integrity</div>
+        <div class="values">Customer-Centric Approach</div>
+        <div class="values">Innovation & Creativity</div>
+        <div class="values">Transparency & Trust</div>
     </div>
   </section>
 
