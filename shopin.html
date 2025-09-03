@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Responsive Product Slider</title>
+<link rel="stylesheet" href="./style1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 <style>
 
 * {
@@ -17,55 +19,7 @@ body {
     font-family: sans-serif;
 }
 
- #logo{
-            width: 80px;
-            border-radius: 10px;
-            position: relative;
-            top: 10px;
-            left: 150px;
-        }
 
-        nav ul{
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            gap: 40px;
-            justify-content: center;
-            align-items: center;
-            margin-top: -40px;
-        }
-
-        nav ul li a{
-            text-decoration: none;
-            color: black;
-            font-size: 18px;
-            position: relative;
-        }
-
-        nav ul li a::after{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            width: 100%;
-            height: 2px;
-            background-color: rgb(32, 160, 180);
-            transform: scaleX(0);
-            transition: 0.3s ease;
-            transform-origin: left;
-        }
-
-        nav ul li a:hover::after{
-            transform: scaleX(1);
-        }
-
-        nav ul li a:hover{
-            color: rgb(32, 160, 180);
-        }
-
-        #log{
-            color: rgb(84, 79, 70);
-        }
 
 
 .product-slider {
@@ -97,14 +51,7 @@ h1{
     color: white;
     background-color: black;
 }
- #log-in{
-        position: relative;
-        left: 450px;
-    }
-    #search{
-        position: relative;
-        left: 470px;
-    }
+
      .timeline {
       padding: 50px 10%;
       text-align: center;
@@ -168,6 +115,7 @@ h1{
       padding: 20px;
       background:rgb(32, 160, 180);
       color: #fff;
+      gap: 10px;
     }
 
 
@@ -227,18 +175,26 @@ h1{
 </head>
 <body>
 
- <nav>
-        <div class="nav-logo">
-            <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" id="logo">
+   <nav>
+        <div class="nav-links">
+            <div class="nav-logo"> <img src="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" alt="logo" id="logo"></div>
+            <div>
             <ul>
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="shopin.html">Shopping</a></li>
                 <li><a href="About.html"> About</a></li>
                 <li><a href="contact.html">contact</a></li>
+            </ul>
+            </div>
+            <div>
+                 <ul>
+                
                 <i class="fa-solid fa-user-plus" id="log"></i>
                 <li><a href="./images/WhatsApp Image 2025-08-18 at 19.41.26_45ab1004.jpg" id="log-in">Log in</a></li>
-                <li><a href="" id="search">🔍</a></li>
+               <i class="fa-solid fa-magnifying-glass"></i>
             </ul>
+            </div>
+           
         </div>
     </nav>
 
